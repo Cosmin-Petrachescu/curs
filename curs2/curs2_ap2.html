@@ -1,33 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Curs 2 ap2</title>
-</head>
-<body>
-    
-    <h1>Subliste</h1>
-    <ul>
-        <li>Acasa</li>
-        <li>Despre noi</li>
-        <ol>
-            <li>Echipa</li>
-            <li>Grupa</li>
-            <li>Cariera</li>
-            <ul>
-                <li>Departament 1</li>
-                <li>Departament 2</li>
-                <li>Departament 3</li>
-                <li>Departament 4</li>
-            </ul>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> Subliste</title>
+    </head>
+    <body>
+		<!-- sublista neordonata   !!!   gresit folosit ol cu ul    -->
+        <ol type="A">
+			<ul>
+				<li>Madrid</li>
+				<li>London
+					<ul>
+						<li>Cloudy</li>
+						<li>Cosmopolitian</li>
+					</ul>
+				</li>
+				<li>Paris</li>
+			</ul>
         </ol>
-        <li>
-            Contact
-        </li>
-    </ul>
-
-
-</body>
+		<!-- sublista ordonata   !!!  gresit folosit ul cu ol   -->
+		<ul>
+			<ol type="a">
+				<li>Madrid</li>
+				<li>London
+					<ul>
+						<li>Cloudy</li>
+						<li>Cosmopolitian</li>
+					</ul>
+				</li>
+				<li>Paris</li>
+			 </ol>
+		</ul>
+		<!-- sublista neordonata -->
+        <ul>
+			<li>Madrid</li>
+			<li>London
+				<ul>
+					<li>Cloudy</li>
+					<li>Cosmopolitian
+						<ul>
+							<li>Ancient</li>
+							<li>Contemporary</li>
+						</ul>
+					</li>
+				</ul>
+			</li>
+			<li>Paris</li>
+        </ul>
+		<!-- sublista ordonata -->
+        <ol type="i">
+			<li>Madrid</li>
+			<li>London
+				<ol type="A">
+					<li>Cloudy</li>
+					<li>Cosmopolitian
+						<ol type="I">
+							<li>Ancient</li>
+							<li>Contemporary</li>
+						</ol>
+					</li>
+					<li>Beautiful</li>
+					<li>Charming</li>
+				</ol>
+			</li>
+			<li>Paris</li>
+        </ol>
+    </body>
 </html>
