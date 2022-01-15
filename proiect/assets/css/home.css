@@ -1,141 +1,207 @@
 /* Core Styles */
+@font-face {
+  font-family: 'Moon Dance';
+  src: url('../fonts/MoonDance-Regular.eot');
+  src: local('Moon Dance Regular'), local('MoonDance-Regular'),
+      url('../fonts/MoonDance-Regular.eot?#iefix') format('embedded-opentype'),
+      url('../fonts/MoonDance-Regular.woff2') format('woff2'),
+      url('../fonts/MoonDance-Regular.woff') format('woff'),
+      url('../fonts/MoonDance-Regular.ttf') format('truetype'),
+      url('../fonts/MoonDance-Regular.svg#MoonDance-Regular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 
 body {
-    margin: 0;
+    margin: 0 0 0 0;
     font-family: Verdana, Arial, Helvetica, sans-serif;
+    background: #333333;
+    /* background-color:#333333;  */
+    color: #ffffff;
+    font-size: 1.1em;
+    line-height: 1.5em;
+    text-align: center;
+  }
+
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+
+  h1,h2,h3,p {
+    margin: 0;
+    padding: 1em 0;
+  }
+
+
+
+  .btn {
+    display:inline-block;
     background: #333;
     color: #fff;
-    font-size: 1.1em;
-    line-height: 1.5;
+    text-decoration: none;
+    padding: 1em 2em;
+    border: 1px solid #666;
+    margin: 0.5em 0;
+  }
+
+        .btn:hover {
+            background: #eaeaea;
+            color: #333;
+        }
+
+  /* Header Showcase */
+
+  #showcase {
+    min-height: 450px;
+    color: #fff;
     text-align: center;
-}
+  }
+ 
+  #showcase .bg-image {
+    position: absolute;
+    background: #333 url("../images/slide01.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    width: 100%;
+    height: 450px;
+    z-index: -1;
+    opacity: 0.4;
+  }
 
-img {
-  display: block;
-  width: 100%;
-  height: auto;
-}
+  #showcase h1 {
+    padding-top: 100px;
+    padding-bottom: 0;
+  }
 
-h1,
-h2,
-h3 {
-  margin: 0;
-  padding: 1em 0;
-}
+  #showcase .content-wrap,
+  #section-a .content-wrap {
+    padding: 0 1.5em;
+  }
 
-p {
-  margin: 0;
-  padding: 1em 0;
-}
 
-.btn {
-  display: inline-block;
-  background: #333;
-  color: #fff;
-  text-decoration: none;
-  padding: 1em 2em;
-  border: 1px solid #666;
-  margin: 0.5em 0;
-}
+  
+  /* Section A */
+  #section-a {
+    background: #eaeaea;
+    color: #333;
+    padding-bottom: 2em;
+  }
+  /* Section B */
+  #section-b {
+    padding: 2em 1em 1em;
+  }
+  #section-b ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  #section-b li {
+    margin-bottom: 1em;
+    background: #fff;
+    color: #333;
+    width: 33%;
+    float: left;
+  }
+  #section-b li  img{
+      min-height: 350px;
+  }
+  .card-content {
+    padding: 1.5em;
+  }
+  /* Section C */
+  #section-c {
+    background: #fff;
+    color: #333;
+    padding: 2em;
+  }
+  
+  /* Section D / Boxes */
 
-.btn:hover {
-  background: #eaeaea;
-  color: #333;
-}
+  #section-d .box {
+    padding: 2em;
+    color: #fff;
+  }
 
-/* Header Showcase */
+  #section-d .box:first-child {
+    background: #2690d4;
+  }
 
-#showcase {
-  min-height: 450px;
-  color: #fff;
-  text-align: center;
-}
+  
+  /* Footer */
 
-#showcase .bg-image {
-  position: absolute;
-  background: #333
-    url("../images/slide01.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 100%;
-  height: 500px;
-  z-index: -1;
-  opacity: 0.4;
-}
+  #main-footer {
+    padding: 2em;
+    background: #000;
+    color: #fff;
+    text-align: center;
+  }
 
-#showcase h1 {
-  padding-top: 100px;
-  padding-bottom: 0;
-}
+  #main-footer a {
+    color: #2690d4;
+    text-decoration: none;
+  }
 
-#showcase .content-wrap,
-#section-a .content-wrap {
-  padding: 0 1.5em;
-}
+  /* Meniu */
+  
+  nav ul li{
+    display: inline-block;
+    list-style: none;
+    padding: 7px;
+  }
+  nav ul li a{
+    color: #ffffff;
+    font-family: 'Moon Dance', cursive;
+    font-size: 24px;
+  }
+  nav ul li a.active{
+    color: red;
+  }
 
-/* Section A */
 
-#section-a {
-  background: #eaeaea;
-  color: #333;
-  padding-bottom: 2em;
-}
 
-/* Section B */
-
-#section-b {
-  padding: 2em 1em 1em;
-}
-
-#section-b ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-#section-b li {
-  margin-bottom: 1em;
-  background: #fff;
-  color: #333;
-}
-
-.card-content {
-  padding: 1.5em;
-}
-
-/* Section C */
-
-#section-c {
-  background: #fff;
-  color: #333;
-  padding: 2em;
-}
-
-/* Section D / Boxes */
-
-#section-d .box {
-  padding: 2em;
-  color: #fff;
-}
-
-#section-d .box:first-child {
-  background: #2690d4;
-}
-
-/* Footer */
-
-#main-footer {
-  padding: 2em;
-  background: #000;
-  color: #fff;
-  text-align: center;
-}
-
-#main-footer a {
-  color: #2690d4;
-  text-decoration: none;
-}
+ /* Portofoliu */
+  /*Christmas Tree icon by Icons8 */
+	.icons8-Christmas-Tree { /* Customizes Christmas Tree icon */
+	  width: 512px;
+	  height: 512px;
+	}
+	
+	.icon-256 {
+	  width: 256px;
+	  height: 256px;
+	}
+	.icon-128 {
+	  width: 128px;
+	  height: 128px;
+	}
+	
+	.icon { /* Customizes all icons at once */
+	  display: inline-block;
+	  
+	}
+  .gingerbread .body {
+    fill: #cd803d;
+  }
+  
+  .gingerbread .eye {
+    fill: white;
+  }
+  
+  .gingerbread .mouth {
+    fill: none;
+    stroke: white;
+    stroke-width: 2px;
+  }
+  
+  .gingerbread .limb {
+    stroke: #cd803d;
+    stroke-width: 35px;
+    stroke-linecap: round;
+  }
 
   /* Media Queries */
 
@@ -173,40 +239,28 @@ p {
       width: 31%;
     }
   }
-  nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    min-height: 8vh;
-    background-image: url(../images/Background.svg);
-    font-family: Arial, Helvetica, sans-serif;
+
+
+  /* Formular */
+  #formjob > div{
+    width: 100%;
+    max-width: 500px;
+    margin: 10px auto;
+    text-align: left;
+    padding: 10px 0px;
+
   }
-  .logo{
-    color: snow;
-    text-transform: uppercase;
-    letter-spacing: 3px;
-    font-size: 20px;
+  #formjob label {
+    display: inline-block;
+    width: 20%;
+
   }
-  nav ul{
-    display: flex;
-    justify-content: space-around;
-    width: 30%;
-  }
-  nav li{
-    list-style: none;
-  }
-  nav a{
-    font-size: 20px;
-    color: snow;
-    text-decoration: none;
-    letter-spacing: 2px;
+  #formjob .bt{
+    padding: 20px 30px;
+    background-color: red;
+    border: none;
+    color: #ffffff;
     font-weight: bold;
+    border-radius: 20px;
   }
-  nav a:hover {
-    background-color: #ddd;
-    color: black;
-  }
-  nav a.active {
-    background-color: #2690d4;
-    color: snow;
-  }
+  
