@@ -1,0 +1,25 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: snow;
+}
+input {
+    border-radius: 10px;
+    background-color: orange;
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+    cursor: pointer;
+    font-size: 1.5em;
+}
+.letter {
+    position: fixed;
+    color: snow;
+    width: 1.2em;
+    height: 1.2em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    border-radius: 0.2em;
+}
