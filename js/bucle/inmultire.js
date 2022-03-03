@@ -13,11 +13,10 @@ while (j <= max) {
 }
 
 document.write('<br>')
-
-for(i = 1; i <= max; i++) {
-    for(j = 1; j <= max; j++) {
-        message = `${j} x ${i} = ${j*i} <br>`
-        document.write(message)
+// 1 initializarea, 2 conditia si 3 incrementarea
+for (i = 1; i <= max; i++) {
+    for (j = 1; j <= max; j++) {
+        document.write(`${i} x ${j} = ${i * j} ${"<br>"}`)
     }
-    document.write('<br>')
+    document.write("<br>")
 }
