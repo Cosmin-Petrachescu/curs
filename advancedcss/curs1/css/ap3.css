@@ -1,0 +1,16 @@
+div{
+    border: 5px solid red;
+    padding: 20px;
+}
+body > div{
+    background-color: brown;
+    color:#ffffff;
+}
+div > div{
+    background-color: cornflowerblue;
+    color: cyan;
+}
+div > div > div{
+    background-color: darkmagenta;
+    color: #000000;
+}
