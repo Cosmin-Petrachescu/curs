@@ -8,7 +8,7 @@ function creatediv(n){
     }
     
 }
-creatediv(72);
+creatediv(20);
 
 
 
