@@ -5,7 +5,7 @@ const sass = require('gulp-sass')(require('node-sass'));
 
 // ca sa transformam fisiere sass/scss in fisiere css: gulp sass
 gulp.task('sass', function () {
-   return gulp.src('sass/ap6.scss')
+   return gulp.src('dev/scss/style.scss')
    .pipe(sass().on('error', sass.logError))
-   .pipe(gulp.dest('css'));
+   .pipe(gulp.dest('assets/css'));
 });
