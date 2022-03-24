@@ -3,11 +3,11 @@ const gulp = require("gulp");
 // Load plugin
 const sass = require("gulp-sass")(require("node-sass"));
 var rename = require('gulp-rename');
-const cleanCSS = require('gulp-clean-css'); 
+const cleanCSS = require('gulp-clean-css');
 var minify = require('gulp-minify');
 var concat = require('gulp-concat');
 // ca sa transformam fisiere sass/scss in fisiere css: gulp sass
- function sasstocss() {
+function sasstocss() {
   return gulp
     .src("dev/scss/style.scss")
     .pipe(sass().on("error", sass.logError))
@@ -15,7 +15,7 @@ var concat = require('gulp-concat');
 }
 
 // ca sa optimizam fisierele css : gulp css
-function csstomin () {
+function csstomin() {
   return gulp
     .src("dev/css/style.css")
 
@@ -33,17 +33,17 @@ function csstomin () {
     .pipe(gulp.dest("assets/css/"));
 }
 // ca sa optimizam fisierele js : gulp css
-function jstomin(){    
+function jstomin() {
   return gulp.src(['dev/js/main.js'])
-      .pipe(concat('custom.js'))
-      .pipe(gulp.dest('dev/js'))
-      .pipe(minify())
-      .pipe(gulp.dest('assets/js'));
+    .pipe(concat('custom.js'))
+    .pipe(gulp.dest('dev/js'))
+    .pipe(minify())
+    .pipe(gulp.dest('assets/js'));
 }
 
 // genereaza in mod automat fisierul css la modificarile diin fisierele scss
 function watch_scss() {
-  return gulp.watch(['dev/scss/style.scss'], gulp.series(sasstocss,csstomin));
+  return gulp.watch(['dev/scss/style.scss'], gulp.series(sasstocss, csstomin));
 }
 function watch_js() {
   return gulp.watch(['dev/js/main.js'], gulp.series(jstomin));
@@ -61,8 +61,8 @@ const imageminMozjpeg = require('imagemin-mozjpeg');
 const imageResize = require('gulp-image-resize');
 */
 gulp.task('images', () => {
-  
-//   specificam dimensiunea imaginilor
+
+  //   specificam dimensiunea imaginilor
   const sizes = [
     { width: 576, quality: 100, suffix: 'small' },
     { width: 768, quality: 60, suffix: 'medium' },
@@ -71,20 +71,20 @@ gulp.task('images', () => {
   let stream;
   sizes.forEach((size) => {
     stream = gulp
-//     calea catre imaginile pe care le dorim sa le optimizam
+      //     calea catre imaginile pe care le dorim sa le optimizam
       .src('assets/images/call-to-action.jpg')
       ///.src('assets/**/*')  // recursiv in toate subfolderele
       // daca apare o eroare nu se opreste si sare peste
       .pipe(plumber())
-//     resize image
+      //     resize image
       .pipe(imageResize({ width: size.width }))
-//       add suffix to image
+      //       add suffix to image
       .pipe(
         rename((path) => {
           path.basename += `-${size.suffix}`;
         }),
       )
-//     reduce image quality based on the size
+      //     reduce image quality based on the size
       .pipe(
         imagemin(
           [
@@ -97,7 +97,7 @@ gulp.task('images', () => {
           },
         ),
       )
-//     output optimized images to a destination folder
+      //     output optimized images to a destination folder
       .pipe(gulp.dest('assets/images'));
   });
   return stream;
