@@ -29,13 +29,13 @@ var carousel = new bootstrap.Carousel(myCarousel, {
   keyboard: true
 })
 //modal
-$("#modalForm").on('show.bs.modal', function (event) {
+$("#modalForm").on('show.bs.modal', function(event) {
   var button = $(event.relatedTarget); //Button that triggered the modal
   const email = button.data('email') //need to find the button and get email
   const nume = button.data('nume') //need to find the button and get name
-  $(".modal-body #email").val(email);
-  $(".modal-body #name").val(nume);
-
-
-
+  $(".modal-body #email").val( email );
+  $(".modal-body #name").val( nume );
+  
+  
+ 
 })
