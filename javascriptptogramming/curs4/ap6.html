@@ -12,15 +12,15 @@
 
     <script>
         let data = prompt("name");
-        alert(`Salut ${data} bine ai venit`);
-        // try {
-        //     if (data === "") throw new Error("Numele nu este completat")
-        //     else alert(`Salut ${data} bine ai venit`)
-        // } catch (e) {
-        //     alert(e)
-        // } finally {
-        //     alert("Se executa mereu");
-        // }
+        //alert(`Salut ${data} bine ai venit`);
+        try {
+            if (data === "") throw new Error("Numele nu este completat")
+            else alert(`Salut ${data} bine ai venit`)
+        } catch (e) {
+            alert(e)
+        } finally {
+            alert("Se executa mereu");
+        }
     </script>
 </body>
 

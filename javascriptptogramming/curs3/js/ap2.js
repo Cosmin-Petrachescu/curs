@@ -13,9 +13,14 @@ const roger = new Person({
     lastName: 'Federer',
     job: new Job('ATP', 'tennis', 1000000)
 });
+const roger2 = new Person({
+    firstName: 'Roger',
+    lastName: 'Federer',
+    job: new Job('ATP', 'tennis', 1000000)
+});
 
 john.fullName = 'Mike Smith';
 john.learn('es6');
 roger.learn('programming');
 john.learn('es7');
-console.log(john);
+console.log(Person.amount);

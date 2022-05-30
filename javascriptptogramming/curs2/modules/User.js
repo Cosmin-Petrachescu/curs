@@ -1,20 +1,21 @@
-class User {
+class User{
     id;
-    name;
+    nume;
     email;
-    age;
-    constructor(id, name, email, age) {
+    varsa;
+
+    constructor(id,nume,email, varsa){
         //setam proprietatile
         this.id = id;
-        this.name = name;
+        this.nume = nume;
         this.email = email;
-        this.age = age;
+        this.varsa = varsa;
     }
-    mananca(claorii) {
+    mananca (claorii){
         console.log(`Mananca ${claorii} pe zi.`);
     }
-    doarme(ore) {
+    doarme(ore){
         console.log(`Doarme ${ore} pe zi`);
     }
 }
-export { User }
+export {User}

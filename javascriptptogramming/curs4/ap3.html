@@ -10,9 +10,9 @@
     
 
     <script>
-        let sursa='12, 34, 56';
+        let sursa='12,      34,       56';
         let pattern = /,\s*/;
-        let result = sursa.split(pattern);
+        let result = sursa.split(pattern,1);
         console.log(result);
     </script>
 </body>

@@ -20,6 +20,7 @@ class NewUser{
         return this.#password;
     }
     // set varsta(newVarsta){
+    //     if(newVarsta >=18 && newVarsta <=30) 
     //     this.#varsta = newVarsta;
     // }
     

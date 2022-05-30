@@ -8,7 +8,7 @@
 </head>
 <body>
     <script>
-'use strict';
+
 function volumeParalelipiped (length, breadth, height) {
   return length * breadth * height
 }
@@ -29,17 +29,17 @@ function calculateVolume (...args) {
     
   
 }
-console.log('Volumul paralelipipedului este ', calculateVolume(3,4,5))
-console.log('Volumul cubului este ', calculateVolume(3))
+// console.log('Volumul paralelipipedului este ', calculateVolume(3,4,5))
+// console.log('Volumul cubului este ', calculateVolume(3))
 
 // ultima functie definita este folosita
-function displayName(fName, lName='Anonim') {
-	return `Salut ${fName} ${lName}`;
-}
+
 function displayName(name) {
 	return `Salut ${name}`;
 }
-
+function displayName(fName, lName) {
+	return `Salut ${fName} ${lName}`;
+}
 console.log (displayName('Ana'));    // 'Hi Ana undefined'
 
 

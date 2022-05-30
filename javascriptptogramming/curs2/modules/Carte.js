@@ -1,4 +1,6 @@
 class Carte{
+    titlu;
+    autor;
     constructor(titlu, autor){
         this.titlu = titlu;
         this.autor = autor;
@@ -10,17 +12,23 @@ class Carte{
         console.log('Am deschis cartea la pagina 43');
     }
 }
+
 class Manual extends Carte{
     nrbucati;
-    constructor(titlu, autor, nrbuc){
-        super(titlu, autor);
-        this.nrbucati = nrbuc;
+    constructor(titlu, autor,nrbuc){
+        super(titlu, autor)
+        this.nrbucati =nrbuc;
     }
+
     getComanda(){
+        
         console.log(`Cartea ${this.titlu} este comandata in ${this.nrbucati}`);
     }
+
     toString(){
+        super.toString();
         console.log('Sunt in clasa copil si apelez metoda din clasa parinte');
     }
+
 }
 export {Carte, Manual}

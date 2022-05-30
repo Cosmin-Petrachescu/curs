@@ -15,7 +15,7 @@
         <p id="destinatie"></p>
 <script>
     let sursa =document.getElementById('sursa').innerHTML;
-    let pattern = /(?:\s)(17)(?:\s)/mg;
+    let pattern = /((?:\s)1(?:7)(?:\s))|(^17)|(17$)/mg;
     let result = sursa.match(pattern);
         document.getElementById("destinatie").innerHTML = result;
 </script>

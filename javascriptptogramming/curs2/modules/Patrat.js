@@ -11,6 +11,7 @@ class Patrat {
     }
 }
 function rezolvaPatrat(patrat){
+    
     console.log(`Aria patratului este:`, patrat.calculeazaArie());
     console.log(`Perimetrul patratului este:`, patrat.calculeazaPerimetru());
 }
@@ -21,6 +22,6 @@ function deseneazaPatrat(patrat){
     ctx.rect(20, 20, patrat.latura, patrat.latura);
     ctx.stroke();
 }
-//export default rezolvaPatrat;
-export {rezolvaPatrat as default,Patrat} 
+export default rezolvaPatrat;
+export {Patrat} 
 // export {rezolvaPatrat as default, deseneazaPatrat, Patrat as MyPatrat} 

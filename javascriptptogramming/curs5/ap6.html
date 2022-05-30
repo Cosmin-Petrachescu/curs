@@ -7,7 +7,8 @@
 </head>
 <body>
   <!--Class View for Application's View-->
-  Input Text: <input type="text" name = "name" id="name"> <input type="text" name = "name" id="nameCopy"><br></br>
+  Input Text: <input type="text" name = "name" id="name">
+   <input type="text" name = "name" id="nameCopy"><br></br>
 <script>
 // Class Model for Application's Model.
 class Model {
@@ -44,7 +45,7 @@ class ViewModel {
       viewElement.value = model.getCurrentText(modelElement);
       model.subscribe(function (attrName, newValue) {
         document.getElementsByName(attrName).forEach(function (elem) {
-          elem.value = newValue.toUpperCase();
+          elem.value = newValue;
         });
       });
       viewElement.addEventListener("input", function () {

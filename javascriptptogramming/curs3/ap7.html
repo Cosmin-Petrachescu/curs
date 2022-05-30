@@ -14,22 +14,26 @@
       constructor(name) {
         this.name = name
       }
-
       sayHi() {
         console.log(`Hi! My name is ${name}`)
       }
+      demo(){
+        console.log('demo');
+      }
     }
-    class Developer extends Human() {
+    class Developer extends Human {
       sayHi() {
         console.log(`Hi! My name is ${name}. I am a developer.`)
       }
     }
-
-    class Designer extends Human() {
+    class Designer extends Human {
       sayHi() {
+        super.demo();
         console.log(`Hi! My name is ${name}. I am a designer.`)
       }
     }
+
+    
     const zell = new Human('Zell')
     const vincy = new Developer('Vincy')
     const tim = new Designer('Tim')

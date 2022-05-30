@@ -19,14 +19,14 @@ class Utilizator{
     static merge(nr_pasi){
         console.log(` Toti utilizatori au mers azi ${nr_pasi} cu cele ${Utilizator.nr_piciore} picioare`)
     }
-    
+
 }
 
 
 
-//let user = new Utilizator('Ion', 'ion@ion.com', 23);
+let user = new Utilizator('Ion', 'ion@ion.com', 23);
 //let user2 = new Utilizator('Dan', 'dan@dan.ro', 22);
-//console.log(user);
+console.log(user);
 //console.log(user2);
 // user.varsta = 32;
 // console.log(user);

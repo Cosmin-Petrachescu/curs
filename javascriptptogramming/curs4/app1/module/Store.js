@@ -1,11 +1,11 @@
-import {UI} from'../module/UI.js';
+import {UI} from '../module/Ui.js';
 // Local Storage Class
 class Store {
-
+ 
     // It'll take care of fetching them from LocalStorage
     static getBooks() {
       let books;
-      if (localStorage.getItem('books') === null) {
+      if(localStorage.getItem('books') === null) {
         books = [];
       } else {
         books = JSON.parse(localStorage.getItem('books'));
@@ -18,7 +18,7 @@ class Store {
     static displayBooks() {
       const books = Store.getBooks();
   
-      books.forEach(function (book) {
+      books.forEach(function(book){
         const ui = new UI;
         // Add Book to UI
         ui.addBookToList(book);
@@ -39,8 +39,8 @@ class Store {
     static removeBook(isbn) {
       const books = Store.getBooks();
   
-      books.forEach(function (book, index) {
-        if (book.isbn === isbn) {
+      books.forEach(function(book, index){
+        if(book.isbn === isbn){
           books.splice(index, 1);
         }
       });
@@ -48,5 +48,4 @@ class Store {
       localStorage.setItem('books', JSON.stringify(books));
     }
   }
-
-  export {Store}
+  export {Store};
