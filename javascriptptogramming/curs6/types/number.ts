@@ -1,6 +1,0 @@
-let decimal: number = 6.1;
-let hex: number = 0xf00d;
-let binary: number = 0b1010;
-let octal: number = 0o444543334;
-
-console.log(decimal);
