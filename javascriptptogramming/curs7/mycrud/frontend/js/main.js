@@ -23,7 +23,7 @@ $(document).ready(function ($) {
     // Adauga utilizator nou
     $('#addNewUser').click(function () {
         $('#userInserUpdateForm').trigger("reset");
-        $('#userModel').html("Adauga un user nou");
+        $('#userModel').html("Adauga un user nou !!!!!");
         $('#user-model').modal('show');
     });
     $.ajaxSetup({
@@ -43,7 +43,7 @@ $(document).ready(function ($) {
         //console.log(data);
         $('#example').dataTable({
             "paging": true,
-            "pageLength": 2,
+            "pageLength": 10,
             processing: true,
             serverSide: false,
             "data": data.data,
@@ -79,7 +79,7 @@ $(document).ready(function ($) {
     //   Editeaza utilizator
     $('body').on('click', '.edit', function () {
         var id = $(this).data('id');
-        $('#userModel').html("Edit User");
+        $('#userModel').html("Edit User ?????");
         $('#btn-save').val("editUser");
         $('#user-model').modal('show');
         // ajax
@@ -94,7 +94,7 @@ $(document).ready(function ($) {
                  console.log(res.data.id);
                 
                 let datan= moment(res.data.datanastere).format('YYYY-MM-DD');  
-                alert(datan);
+                //
                 $('#id').val(res.data.id);
                 $('#lname').val(res.data.nume);
                 $('#fname').val(res.data.prenume);
@@ -165,7 +165,7 @@ $(document).ready(function ($) {
             },
             complete: function () {
                 $('#user-model').modal('hide');
-                window.location.reload();
+               // window.location.reload();
             }
         });
     });

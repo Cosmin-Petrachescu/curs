@@ -18,7 +18,7 @@ const faust = new Book('faust', 12.5,10, 'Goethe');
 
 
 
-products.sort(Product.orderByPrice);
+// products.sort(Product.orderByPrice);
 console.log(products);
 const cos = new Basket();
 

@@ -50,3 +50,50 @@ userRouter.get("/", (req, res) => __awaiter(void 0, void 0, void 0, function* ()
         res.status(200).json({ "data": users });
     });
 }));
+userRouter.post("/", jsonParser, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    console.log(req.body);
+    const newUser = req.body;
+    userModel.create(newUser, (err, userId) => {
+        if (err) {
+            return res.status(500).json({ "message": err.message });
+        }
+        res.status(200).json({ "userId": userId });
+    });
+}));
+userRouter.get("/:id", (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const userId = Number(req.params.id);
+    userModel.findOne(userId, (err, user) => {
+        if (err) {
+            return res.status(500).json({ "message": err.message });
+        }
+        res.status(200).json({ "data": user });
+    });
+}));
+// Edit user
+userRouter.put("/:id", jsonParser, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const user = req.body;
+    console.log(req.body);
+    userModel.update(user, (err) => {
+        if (err) {
+            return res.status(500).json({ "message": err.message });
+        }
+        // res.status(200).send();
+        res.status(200).json({
+            "message": 'success'
+        });
+    });
+}));
+// DElete user
+userRouter.delete("/:id", jsonParser, (req, res) => __awaiter(void 0, void 0, void 0, function* () {
+    const user = req.body;
+    console.log(req.body);
+    userModel.deleteUser(user, (err) => {
+        if (err) {
+            return res.status(500).json({ "message": err.message });
+        }
+        // res.status(200).send();
+        res.status(200).json({
+            "message": 'success'
+        });
+    });
+}));

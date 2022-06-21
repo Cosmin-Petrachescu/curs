@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.findAll = void 0;
+exports.deleteUser = exports.update = exports.findOne = exports.create = exports.findAll = void 0;
 const db_1 = require("../db");
 // Get all users
 const findAll = (callback) => {
@@ -28,3 +28,58 @@ const findAll = (callback) => {
     });
 };
 exports.findAll = findAll;
+// create user
+const create = (user, callback) => {
+    const queryString = "INSERT INTO jsusers (nume, prenume, email, datanastere, telefon) VALUES (?, ?, ?, ?, ?)";
+    console.log(user);
+    db_1.db.query(queryString, [user.nume, user.prenume, user.email, user.datanastere, user.telefon], (err, result) => {
+        if (err) {
+            callback(err);
+        }
+        const insertId = result.insertId;
+        callback(null, insertId);
+    });
+};
+exports.create = create;
+const findOne = (userId, callback) => {
+    const queryString = `SELECT * FROM jsusers WHERE id=?`;
+    db_1.db.query(queryString, userId, (err, result) => {
+        if (err) {
+            callback(err);
+        }
+        const row = result[0];
+        const user = {
+            id: row.id,
+            nume: row.nume,
+            prenume: row.prenume,
+            email: row.email,
+            datanastere: row.datanastere,
+            telefon: row.telefon,
+            //dataadaugare: row.dataadaugare,
+        };
+        callback(null, user);
+    });
+};
+exports.findOne = findOne;
+// update user
+const update = (user, callback) => {
+    const queryString = `UPDATE jsusers SET nume=?, prenume=?, email=? WHERE id=?`;
+    db_1.db.query(queryString, [user.nume, user.prenume, user.email, user.id], (err, result) => {
+        if (err) {
+            callback(err);
+        }
+        callback(null);
+    });
+};
+exports.update = update;
+// update user
+const deleteUser = (user, callback) => {
+    const queryString = `DELETE FROM jsusers WHERE id=?`;
+    db_1.db.query(queryString, [user.id], (err, result) => {
+        if (err) {
+            callback(err);
+        }
+        callback(null);
+    });
+};
+exports.deleteUser = deleteUser;

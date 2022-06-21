@@ -1,0 +1,20 @@
+<?xml version ="1.0" encoding= "UTF-8"?>
+<root>
+<contacte>
+    <user id='1'>
+        <nume><![CDATA[<b>Ionesșț,.ăîșțîâcu</b>]]></nume>
+        <prenume>Ion > Vasile</prenume>
+        <email>ionescu.ion@demo.com</email>
+        <telefon>0744444444</telefon>
+    </user>
+    <user id='2'>
+        <nume>Popescu</nume>
+        <prenume>Dan</prenume>
+        <email>popescu.dan@demo.com</email>
+        <telefon>0755555555</telefon>
+    </user>
+</contacte>
+<adrese>
+<scara>333</scara>
+</adrese>
+</root>
